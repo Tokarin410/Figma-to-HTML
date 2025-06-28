@@ -18,6 +18,19 @@ body {
 a {
   text-decoration: none;
 }
+.heading-lv2 {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+.paragraph {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
 .btn {
   display: inline-block;
   min-width: 118px;
@@ -33,12 +46,25 @@ a {
 }
 .btn:hover {
   opacity: 0.9;
+  cursor: pointer;
 }
 .main-content {
   width: 1170px;
   margin-left: auto;
   max-width: calc(100% - 48px);
   margin-right: auto;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
 }
 /* ------------------header--------------------- */
 .header {
@@ -90,7 +116,7 @@ a {
 .header .btn-sign-up {
   min-width: 144px;
 }
-/* ----------------Hero--------------- */
+/* ==================Hero============== */
 .hero {
   background-color: #fffcf4;
   padding: 56px 0 56px; /*trên figma cách 64px mà padding của header cách 8px sẵn r*/
@@ -173,9 +199,6 @@ a {
 }
 .content-block .paragraph {
   margin-top: 22px;
-  color: #5f5b53;
-  font-size: 1.8rem;
-  line-height: 1.67;
 }
 .content-block .cta-group {
   display: flex;
@@ -225,4 +248,171 @@ a {
 }
 .paragraph2 strong:nth-child(2) {
   margin-left: 28px;
+}
+/*============== popular==================== */
+/* -------Top--------- */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-top .paragraph {
+  margin-top: 16px;
+  width: 458px;
+}
+.controls {
+  display: flex;
+  gap: 18px;
+}
+.controls .control-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.controls .control-btn:hover {
+  background: var(--primary-color);
+  cursor: pointer;
+  color: #fff;
+}
+/* ------------Course list---------- */
+.popular .course-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+.popular .course-item .thumb {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  height: 278px;
+  object-fit: cover;
+}
+.popular .course-item {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+.popular .course-item:hover {
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+.describe-course {
+  padding: 16px 22px 22px;
+}
+.course-list .tieu-de {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.describe-course h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+.describe-course a {
+  color: #171100;
+}
+.tieu-de .rate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-color);
+}
+.rate .value {
+  line-height: 1.75;
+}
+.course-item .paragraph {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.describe-course .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.price .book-now {
+  background-color: #171100;
+  border: none;
+}
+.price .book-now:hover {
+  background: var(--primary-color);
+}
+/* ==================Feedback============== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0px;
+  background: #2e2100;
+}
+.feedback-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+.info .paragraph {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  color: #bfbcb2;
+  line-height: 1.86;
+}
+.feedback-item .dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+}
+.feedback-item .dots .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback-item .dots .dot:hover {
+  background: var(--primary-color);
+}
+.dots .dot:active {
+  background: var(--primary-color);
+  cursor: default;
+}
+.feedback-item .content {
+  width: 68%;
+}
+.feedback-item .fa-quote-left {
+  color: #634700;
+  width: 30px;
+  height: 28px;
+}
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
 }
