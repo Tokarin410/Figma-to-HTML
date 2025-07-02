@@ -469,7 +469,6 @@ a {
 }
 .features-2 .paragraph {
   margin-top: 16px;
-  margin-bottom: ;
   color: #5f5b53;
   font-size: 1.6rem;
   line-height: 1.75;
@@ -509,11 +508,11 @@ a {
 .our-blog .blog-list {
   display: flex;
   margin-top: 55px;
-  gap: 30px;
+  gap: 20px;
   overflow: hidden;
 }
 .blog-list .card {
-  width: calc(33.33% - 15px);
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
   flex-shrink: 0;
@@ -645,6 +644,13 @@ a {
   line-height: 1.86;
   color: #bfbcb2;
   margin-bottom: 12px;
+}
+.footer .list a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+  transition: all ease 0.5s;
+  /* font-weight: 600px; */
+  /* text-shadow: 1px 0 0 currentColor; */
 }
 .footer .list li:last-child a {
   margin-bottom: 0px;
